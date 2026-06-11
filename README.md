@@ -17,3 +17,15 @@ to this in your browser, and you can call your Go code from devtools.
 ## Building
 
 To build a redistributable, production mode package, use `wails build`.
+
+## Instant Snapshots
+
+Currently, no object level incremental changes added. 
+
+Current Look:
+
+### Main Page
+![Main Page](assets/Screenshot%202026-06-11%20132830.png)
+
+### Project Settings Page
+![Preferences](assets/Screenshot%202026-06-11%20132942.png)
