@@ -1,0 +1,238 @@
+.titleBar {
+  height: 32px;
+  background: var(--c-surface-2);
+  border-bottom: 1px solid var(--c-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--sp-3);
+  flex-shrink: 0;
+}
+
+.titleLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.titleText {
+  color: var(--c-text-muted);
+}
+
+.titleClose {
+  color: var(--c-text-dim);
+  cursor: pointer;
+  padding: 2px;
+  transition: color 0.1s;
+}
+
+.titleClose:hover { color: var(--c-text); }
+.titleClose:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: var(--sp-6);
+  color: var(--c-text-dim);
+  font-size: 12px;
+}
+
+.loadError {
+  padding: var(--sp-4);
+  color: var(--c-error);
+  font-size: 12px;
+}
+
+.body {
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+.snapshotInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--sp-4);
+}
+
+.snapshotInfoLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.targetLabel {
+  color: var(--c-text-dim);
+}
+
+.snapshotName {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--c-text);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.snapshotMeta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--c-text-dim);
+}
+
+.sizeBox {
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  padding: var(--sp-2) var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.sizeLabel {
+  color: var(--c-text-dim);
+}
+
+.sizeValue {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+/* Warning zone */
+.warningZone {
+  background: rgba(255,85,85,0.03);
+  border-left: 2px solid rgba(255,85,85,0.35);
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.warningHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.warningTitle {
+  color: rgba(255,85,85,0.8);
+}
+
+.warningGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+}
+
+.warningActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.warningNote {
+  font-size: 11px;
+  color: rgba(255,85,85,0.65);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Preserved */
+.preservedSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.preservedHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.preservedLabel {
+  color: var(--c-text-dim);
+}
+
+.preservedNote {
+  font-size: 10px;
+  color: var(--c-text-dim);
+  font-style: italic;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1);
+}
+
+.chip {
+  padding: 2px var(--sp-2);
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--c-text-muted);
+}
+
+.restoreError {
+  font-size: 11px;
+  color: var(--c-error);
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid rgba(255,85,85,0.25);
+  background: rgba(75,0,0,0.15);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  border-top: 1px solid var(--c-border);
+}
+
+.abortBtn {
+  flex: 1;
+  height: 52px;
+  background: none;
+  border: none;
+  color: var(--c-text-muted);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+}
+
+.abortBtn:hover { background: rgba(255,255,255,0.04); color: var(--c-text); }
+.abortBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.confirmBtn {
+  flex: 1.5;
+  height: 52px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-left: 1px solid var(--c-border);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  transition: opacity 0.1s;
+}
+
+.confirmBtn:hover { opacity: 0.88; }
+.confirmBtn:disabled { opacity: 0.4; cursor: not-allowed; }

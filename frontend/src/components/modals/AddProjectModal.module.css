@@ -1,0 +1,37 @@
+.pathRow {
+  display: flex;
+  gap: 1px;
+}
+
+.pathInput {
+  flex: 1;
+  min-width: 0;
+}
+
+.browseBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--c-surface-3);
+  border: 1px solid var(--c-border);
+  border-left: none;
+  color: var(--c-text-muted);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.browseBtn:hover { background: var(--c-surface-4); color: var(--c-text); }
+.browseBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.hint {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--c-text-dim);
+  margin-top: var(--sp-1);
+}

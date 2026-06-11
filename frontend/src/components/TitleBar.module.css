@@ -1,0 +1,81 @@
+.root {
+  height: var(--titlebar-h);
+  background: var(--c-surface-1);
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  cursor: default;
+  app-region: drag;
+  -webkit-app-region: drag;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0 var(--sp-3);
+  overflow: hidden;
+}
+
+.icon {
+  font-size: 14px;
+  color: var(--c-text-muted);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-text-muted);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.divider {
+  width: 1px;
+  height: 12px;
+  background: var(--c-border);
+  flex-shrink: 0;
+}
+
+.subtitle {
+  font-size: 11px;
+  color: var(--c-text-dim);
+  font-family: var(--font-mono);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.controls {
+  display: flex;
+  height: 100%;
+  app-region: no-drag;
+  -webkit-app-region: no-drag;
+}
+
+.btn {
+  width: 46px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-text-muted);
+  transition: background 0.1s;
+  cursor: pointer;
+}
+
+.btn .material-symbols-outlined {
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.close:hover {
+  background: #c42b1c;
+  color: #fff;
+}

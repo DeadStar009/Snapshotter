@@ -1,0 +1,40 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--sp-3);
+  height: 36px;
+  background: var(--c-surface-2);
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.05);
+  flex-shrink: 0;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.icon {
+  font-size: 16px;
+  color: var(--c-text-muted);
+}
+
+.title {
+  color: var(--c-text);
+}
+
+.closeBtn {
+  color: var(--c-text-dim);
+  cursor: pointer;
+  padding: 2px;
+  transition: color 0.1s;
+}
+
+.closeBtn .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.closeBtn:hover {
+  color: var(--c-text);
+}

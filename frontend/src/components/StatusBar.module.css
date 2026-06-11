@@ -1,0 +1,86 @@
+.root {
+  height: var(--statusbar-h);
+  background: var(--c-surface-0);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--sp-3);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-success);
+  flex-shrink: 0;
+}
+
+.item {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--c-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: default;
+}
+
+.item:hover {
+  color: var(--c-text-muted);
+}
+
+.sep {
+  color: var(--c-border);
+  font-size: 10px;
+}
+
+.errorMsg {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--c-text-muted);
+  max-width: 600px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dismissBtn {
+  color: var(--c-text-dim);
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 var(--sp-1);
+  cursor: pointer;
+  transition: color 0.1s;
+}
+
+.dismissBtn:hover {
+  color: var(--c-error);
+}
